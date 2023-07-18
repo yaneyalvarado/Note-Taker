@@ -14,14 +14,14 @@ app.get("/notes", (req, res) => {
 });
 
 // Post request
-app.post("/api/notes", function(req, res) {
+app.post("/notes", function(req, res) {
     let newNote = req.body;
-    let uniqueId = (data.length).toString();
+    let uniqueId = (notesData.length).toString();
     console.log(uniqueId);
     newNote.id = uniqueId;
-    data.push(newNote);
+    notesData.push(newNote);
 
-    fs.writeFileSync("./db/db.json", JSON.stringify(data), function(err) {
+    fs.writeFileSync("./db/db.json", JSON.stringify(notesData), function(err) {
         if (err) throw (err);
     });
     res.json(data);
@@ -32,13 +32,15 @@ app.delete("/notes/:id", (req, res) => {
     let noteId = req.params.id;
     let newId = 0;
     console.log(`Note deleting with ID ${noteId}`);
-    data = data.filter(currentNote => {
+    notesData = notesData.filter(currentNote => {
         return currentNote.id != noteId;
     });
-    for (currentNote of data) {
-        currentNote.id = newId.toString();
-        newId++;
-    }
-    fs.writeFileSync("./db/db.json", JSON.stringify(data));
-    res.json(data);
+    // for (currentNote of data) {
+    //     currentNote.id = newId.toString();
+    //     newId++;
+    // }
+    fs.writeFileSync("./db/db.json", JSON.stringify(notesData));
+    res.json(notesData);
 });
+
+module.exports = app;

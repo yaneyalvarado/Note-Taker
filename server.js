@@ -6,13 +6,12 @@ const apiRoute = require("./routes/apiroutes");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/public/assets", express.static(__dirname + "/public/assets"));
-
+// app.use("public", express.static(__dirname + "public"));
+app.use(express.static("public"));
 app.use('/api', apiRoute);
 app.use('/', htmlRoute);
 
-app.listen(PORT, () => {
-    console.log(`App listening on PORT ${PORT}`);
+app.listen(3000, () => {
+    console.log(`App listening on PORT ${3000}`);
 });
 
-module.exports = app;
