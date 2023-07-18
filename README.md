@@ -23,6 +23,6 @@ This application can be used to write and save notes. This aplication will use a
 
 ## Mock-Up
 
-## Deployment
+## Deployment with 
 
 ## GitHub
