@@ -22,6 +22,7 @@ This application can be used to write and save notes. This aplication will use a
 - THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 ## Mock-Up
+https://drive.google.com/file/d/1JWhtNN2hXcSKMNI3j1Xuiu4UsGVVQLb0/view?usp=drive_link
 
 ## Deployment with Heroku
 https://calm-retreat-34165.herokuapp.com/
