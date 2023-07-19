@@ -23,6 +23,8 @@ This application can be used to write and save notes. This aplication will use a
 
 ## Mock-Up
 
-## Deployment with 
+## Deployment with Heroku
+https://calm-retreat-34165.herokuapp.com/
 
 ## GitHub
+https://github.com/yaneyalvarado/Note-Taker
